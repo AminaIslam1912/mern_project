@@ -1,0 +1,238 @@
+.place-order {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-top: 50px;
+  padding-bottom: 80px;
+}
+
+.place-order-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.place-order-left .tittle {
+  font-size: 28px;
+  font-weight: 600;
+  color: #262626;
+  margin-bottom: 15px;
+}
+
+.place-order-left input {
+  padding: 12px 15px;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+  font-family: "Outfit", sans-serif;
+}
+
+.place-order-left input:focus {
+  border-color: tomato;
+  box-shadow: 0 0 0 3px rgba(255, 99, 71, 0.1);
+}
+
+.place-order-left input::placeholder {
+  color: #999;
+}
+
+.multi-feilds {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* Right Side - Cart Total */
+.place-order-right {
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+}
+
+.place-order-right .cart-total {
+  padding: 30px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+}
+
+.place-order-right .cart-total h2 {
+  font-size: 22px;
+  color: #262626;
+  margin-bottom: 25px;
+}
+
+.place-order-right .cart-total-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.place-order-right .cart-total-details div {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #e2e2e2;
+  font-size: 15px;
+  color: #555;
+}
+
+.place-order-right .cart-total-details div:last-child {
+  border-bottom: none;
+  font-weight: 600;
+  font-size: 18px;
+  color: #262626;
+  padding-top: 15px;
+}
+
+.place-order-right .discount-row {
+  color: #4caf50 !important;
+}
+
+.place-order-right .discount-row .discount-amount {
+  color: #4caf50;
+  font-weight: 600;
+}
+
+.place-order-right button {
+  width: 100%;
+  padding: 15px;
+  background-color: tomato;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 25px;
+  transition: all 0.3s ease;
+}
+
+.place-order-right button:hover {
+  background-color: #ff5436;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 99, 71, 0.3);
+}
+
+.place-order-right button:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .place-order {
+    gap: 40px;
+  }
+
+  .place-order-left .tittle {
+    font-size: 26px;
+  }
+
+  .place-order-right .cart-total {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .place-order {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 30px;
+    padding-bottom: 50px;
+  }
+
+  .place-order-left .tittle {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .place-order-left {
+    gap: 15px;
+  }
+
+  .place-order-left input {
+    padding: 11px 14px;
+    font-size: 13px;
+  }
+
+  .multi-feilds {
+    gap: 12px;
+  }
+
+  .place-order-right {
+    position: static;
+    margin-top: 20px;
+  }
+
+  .place-order-right .cart-total {
+    padding: 20px;
+  }
+
+  .place-order-right .cart-total h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .place-order-right .cart-total-details div {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+
+  .place-order-right .cart-total-details div:last-child {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .place-order {
+    margin-top: 20px;
+    padding-bottom: 40px;
+    gap: 25px;
+  }
+
+  .place-order-left .tittle {
+    font-size: 20px;
+  }
+
+  .place-order-left {
+    gap: 12px;
+  }
+
+  .place-order-left input {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .multi-feilds {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .place-order-right .cart-total {
+    padding: 18px;
+  }
+
+  .place-order-right .cart-total h2 {
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
+
+  .place-order-right .cart-total-details {
+    gap: 12px;
+  }
+
+  .place-order-right .cart-total-details div {
+    font-size: 13px;
+  }
+
+  .place-order-right .cart-total-details div:last-child {
+    font-size: 15px;
+  }
+
+  .place-order-right button {
+    padding: 13px;
+    font-size: 14px;
+    margin-top: 20px;
+  }
+}
